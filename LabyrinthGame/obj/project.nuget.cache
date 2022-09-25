@@ -1,8 +1,10 @@
 {
   "version": 2,
-  "dgSpecHash": "ZYn587+Fshl29KwmRCrTkeYwSF5x2pFbnUeoPEeOD9T3szECFnFwKInHHPMS1eASJCDAkkLOmKHXZmbk58QnNg==",
+  "dgSpecHash": "A9CwZ3NJAH1okRswB9gj5NZCGXBcNpWqV972I/s6T9B+QYzQEY/hWaKz9FNZRKTWUMW7v3FoLoFZT+e4Av0dLw==",
   "success": true,
-  "projectFilePath": "C:\\Users\\gusta\\source\\repos\\LabyrinthGame\\LabyrinthGame\\LabyrinthGame.csproj",
-  "expectedPackageFiles": [],
+  "projectFilePath": "C:\\Users\\21guslof\\Development\\C#\\MazeGame\\LabyrinthGame\\LabyrinthGame.csproj",
+  "expectedPackageFiles": [
+    "C:\\Users\\21guslof\\.nuget\\packages\\microsoft.netcore.app.host.win-x64\\3.1.28\\microsoft.netcore.app.host.win-x64.3.1.28.nupkg.sha512"
+  ],
   "logs": []
 }

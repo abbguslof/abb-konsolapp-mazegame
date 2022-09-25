@@ -70,15 +70,36 @@ namespace LabyrinthGame
         }
         private void GameLoop()
         {
+            var watch = System.Diagnostics.Stopwatch.StartNew();
             while(true)
             {
                 DrawFrame();
-
+                
                 PlayerInput();
 
                 string elementAtPlayerPos = MyWorld.GetElementAt(CurrentPlayer.X, CurrentPlayer.Y);
                 if (elementAtPlayerPos == "X")
                 {
+                    Clear();
+                    watch.Stop();
+
+                    string Won = "Good Work. You Won.";
+                    string time = "Time: "+(watch.ElapsedMilliseconds/1000).ToString()+" sec";
+                    string pressEnt = "Press enter to contiune....";
+                    WriteLine("\n");
+                    SetCursorPosition((WindowWidth - Won.Length) / 2, CursorTop);
+                    WriteLine(Won);
+                    
+                    SetCursorPosition((WindowWidth - time.Length) / 2, CursorTop);
+                    WriteLine(time);
+                    WriteLine("\n");
+                    SetCursorPosition((WindowWidth - pressEnt.Length) / 2, CursorTop);
+                    WriteLine(pressEnt);
+                    System.Threading.Thread.Sleep(100);
+                    ReadKey(true);
+
+                    Mainmenu start = new Mainmenu();
+                    start.RunGameMenu();
                     break;
                 }
 
