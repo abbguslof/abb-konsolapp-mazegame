@@ -18,9 +18,15 @@ namespace LabyrinthGame
             IndexSelected = 0;
         }
 
+        public void clearLines(int lines)
+        {
+            Console.SetCursorPosition(0, Console.CursorTop);
+            Console.Write(new string(' ', Console.WindowWidth)); 
+            Console.SetCursorPosition(0, Console.CursorTop - lines);
+        }
+
         private void DisplayMenu()
         {
-            WriteLine(String.Format("{0," + WindowWidth / 2 + "}", Prompt));
             for (int i = 0; i < Options.Length; i++)
             {
                 string currentOption = Options[i];
@@ -49,25 +55,28 @@ namespace LabyrinthGame
 
         public int Runmenu()
         {
+            WriteLine(Prompt);
+            WriteLine('\n');
             ConsoleKey keyPressed;
             do
             {
-                Clear();
                 DisplayMenu();
 
                 ConsoleKeyInfo keyInfo = ReadKey(true);
                 keyPressed = keyInfo.Key;
 
-                if(keyPressed == ConsoleKey.UpArrow)
+                if(keyPressed == ConsoleKey.UpArrow || keyPressed == ConsoleKey.W)
                 {
+                    clearLines(Options.Length+1);
                     IndexSelected--;
                     if (IndexSelected == -1)
                     {
                         IndexSelected = Options.Length - 1;
                     }
                 }
-                else if (keyPressed == ConsoleKey.DownArrow)
+                else if (keyPressed == ConsoleKey.DownArrow || keyPressed == ConsoleKey.S)
                 {
+                    clearLines(Options.Length+1);
                     IndexSelected++;
                     if (IndexSelected == Options.Length)
                     {

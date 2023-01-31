@@ -20,15 +20,18 @@ namespace LabyrinthGame
         {
             Title = "The Labyrinth";
             CursorVisible = false;
+
             string[] options = { "Play", "Exit" };
             Menu mainmenu = new Menu(prompt, options);
             int IndexSelected = mainmenu.Runmenu();
             switch (IndexSelected)
             {
                 case 0:
+                    Clear();
                     SelectDifficulty();
                     break;
                 case 1:
+                    Clear();
                     ExitGame();
                     break;
             }
@@ -59,6 +62,7 @@ namespace LabyrinthGame
                     currentGame.Start("ExtremeMaze.txt");
                     break;
                 case 4:
+                    Clear();
                     RunGameMenu();
                     break;
             }
@@ -66,7 +70,7 @@ namespace LabyrinthGame
         private void ExitGame()
         {
             string bye = "Goodbye.";
-            SetCursorPosition((WindowWidth - bye.Length) / 2, CursorTop);
+            SetCursorPosition((WindowWidth - bye.Length) / 2, CursorTop+WindowHeight/2-5);
             WriteLine(bye);
             System.Threading.Thread.Sleep(350);
             Environment.Exit(0);

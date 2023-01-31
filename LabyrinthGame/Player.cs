@@ -21,6 +21,7 @@ namespace LabyrinthGame
 
         public void DrawPlayer()
         {
+            CursorVisible = false;
             ForegroundColor = PlayerColor;
             SetCursorPosition(X, Y);
             Write(PlayerMarker);

@@ -64,7 +64,7 @@ namespace LabyrinthGame
         }
         public string GetElementAt(int x, int y)
         {
-            return Grid[y, x];    
+            return Grid[y, x];
         }
         public bool CanPlayerWalk(int x, int y)
         {

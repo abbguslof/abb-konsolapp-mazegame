@@ -37,30 +37,35 @@ namespace LabyrinthGame
             switch(key)
             {
                 case ConsoleKey.UpArrow:
+                case ConsoleKey.W:
                     if (MyWorld.CanPlayerWalk(CurrentPlayer.X, CurrentPlayer.Y - 1))
                     {
                         CurrentPlayer.Y -= 1;
                     }
                     break;
                 case ConsoleKey.DownArrow:
+                case ConsoleKey.S:
                     if (MyWorld.CanPlayerWalk(CurrentPlayer.X, CurrentPlayer.Y + 1))
                     {
                         CurrentPlayer.Y += 1;
                     }
                     break;
                 case ConsoleKey.LeftArrow:
+                case ConsoleKey.A:
                     if (MyWorld.CanPlayerWalk(CurrentPlayer.X - 1, CurrentPlayer.Y))
                     {
                         CurrentPlayer.X -= 1;
                     }
                     break;
                 case ConsoleKey.RightArrow:
+                case ConsoleKey.D:
                     if (MyWorld.CanPlayerWalk(CurrentPlayer.X + 1, CurrentPlayer.Y))
                     {
                         CurrentPlayer.X += 1;
                     }
                     break;
                 case ConsoleKey.Escape:
+                    Clear();
                     Mainmenu start = new Mainmenu();
                     start.RunGameMenu();
                     break;
@@ -74,7 +79,6 @@ namespace LabyrinthGame
             while(true)
             {
                 DrawFrame();
-                
                 PlayerInput();
 
                 string elementAtPlayerPos = MyWorld.GetElementAt(CurrentPlayer.X, CurrentPlayer.Y);
@@ -85,7 +89,7 @@ namespace LabyrinthGame
 
                     string Won = "Good Work. You Won.";
                     string time = "Time: "+(watch.ElapsedMilliseconds/1000).ToString()+" sec";
-                    string pressEnt = "Press enter to contiune....";
+                    string pressEnt = "Press any key to contiune....";
                     WriteLine("\n");
                     SetCursorPosition((WindowWidth - Won.Length) / 2, CursorTop);
                     WriteLine(Won);
@@ -93,10 +97,11 @@ namespace LabyrinthGame
                     SetCursorPosition((WindowWidth - time.Length) / 2, CursorTop);
                     WriteLine(time);
                     WriteLine("\n");
+                    System.Threading.Thread.Sleep(1000);
                     SetCursorPosition((WindowWidth - pressEnt.Length) / 2, CursorTop);
                     WriteLine(pressEnt);
-                    System.Threading.Thread.Sleep(100);
                     ReadKey(true);
+                    Clear();
 
                     Mainmenu start = new Mainmenu();
                     start.RunGameMenu();
