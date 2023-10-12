@@ -29,7 +29,6 @@ namespace LabyrinthGame
                     if (element == "X")
                     {
                         ForegroundColor = ConsoleColor.Blue;
-
                     }
                     else
                     {

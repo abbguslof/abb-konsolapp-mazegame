@@ -26,7 +26,6 @@ C:\Users\21guslof\Development\C#\MazeGame\LabyrinthGame\bin\Debug\netcoreapp3.1\
 C:\Users\21guslof\Development\C#\MazeGame\LabyrinthGame\bin\Debug\netcoreapp3.1\LabyrinthGame.runtimeconfig.dev.json
 C:\Users\21guslof\Development\C#\MazeGame\LabyrinthGame\bin\Debug\netcoreapp3.1\LabyrinthGame.dll
 C:\Users\21guslof\Development\C#\MazeGame\LabyrinthGame\bin\Debug\netcoreapp3.1\LabyrinthGame.pdb
-C:\Users\21guslof\Development\C#\MazeGame\LabyrinthGame\obj\Debug\netcoreapp3.1\LabyrinthGame.csproj.AssemblyReference.cache
 C:\Users\21guslof\Development\C#\MazeGame\LabyrinthGame\obj\Debug\netcoreapp3.1\LabyrinthGame.GeneratedMSBuildEditorConfig.editorconfig
 C:\Users\21guslof\Development\C#\MazeGame\LabyrinthGame\obj\Debug\netcoreapp3.1\LabyrinthGame.AssemblyInfoInputs.cache
 C:\Users\21guslof\Development\C#\MazeGame\LabyrinthGame\obj\Debug\netcoreapp3.1\LabyrinthGame.AssemblyInfo.cs
